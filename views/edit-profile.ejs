@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share it | Social Media App</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/edit-profile.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="links-cont">
+            <a href="/feed">
+                <div class="link">
+                    <img src="/images/feed-icon.png" alt="">
+                </div>
+            </a>
+        </div>
+
+        <div class="logo-cont">
+            <div class="logo">
+                <img src="/images/logo.png" alt="">
+                <div>Share it</div>
+            </div>
+        </div>
+
+        <div class="logout-cont">
+            <a href="/logout">
+                <div class="logout">
+                    <span class="text">Logout</span>
+                    <span class="img">
+                        <img src="/images/logout-icon.png" alt="">
+                    </span>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <nav>
+        <div class="logo-cont">
+            <div class="logo">
+                <img src="/images/logo.png" alt="">
+                <div>Share it</div>
+            </div>
+        </div>
+
+        <div class="links-cont">
+            <a href="/feed">
+                <div class="link">
+                    <img src="/images/feed-icon.png" alt="">
+                    <div>Feed</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="logout-cont">
+            <a href="/logout">
+                <div class="logout">
+                    <span class="text">Logout</span>
+                    <span class="img">
+                        <img src="/images/logout-icon.png" alt="">
+                    </span>
+                </div>
+            </a>
+        </div>
+
+    </nav>
+
+    <div class="container">
+        <div class="left">
+            <div class="edit">Edit Profile details</div>
+            <div class="form">
+                <form action="/edit-profile/<%= user._id %>" method="post" enctype="multipart/form-data">
+                    <input type="file" name="profilepic" id="profilepic" class="profilepic-class">
+                    <label for="profilepic" class="profilepic-label">Choose Profile picture</label>
+                    <input type="text" pattern="^\S+$" title="Username cannot contain spaces" placeholder="Username"
+                        name="username" id="username" value="<%= user.username %>" required>
+                    <input type="text" placeholder="Name" name="name" id="name" value="<%= user.name %>" required>
+                    <input type="number" placeholder="Age" name="age" id="age" value="<%= user.age %>" required>
+                    <input type="submit" id="btn" value="Save Details">
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

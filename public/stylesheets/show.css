@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+body {
+    font-family: "Parkinsans", serif;
+    background-color: #ffff8f;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: none;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    height: 60px;
+    padding: 5px;
+    background-color: #f8f878;
+    position: sticky;
+    top: 0;
+    box-shadow: 1px 1px 10px black;
+}
+
+.logo-cont {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    width: 220px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(0.98);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo div {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.links-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links-cont a {
+    text-decoration: none;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.link img {
+    height: 30px;
+    width: 30px;
+    margin-bottom: -2px;
+}
+
+.link div {
+    color: black;
+    font-weight: 500;
+}
+
+.link:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.logout-cont {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+/* From Uiverse.io by mrhyddenn */
+
+.logout {
+    position: relative;
+    background: #fa3838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 15px;
+    margin-right: 22px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.text::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: 26px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.logout:hover .text {
+    top: 75px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    text-align: center;
+    width: 60px;
+}
+
+.logout:hover,
+.logout:hover .text,
+.logout:hover .text::before {
+    background-color: #ff7b00;
+    color: #ffffff;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img {
+    height: 25px;
+}
+
+/* ---------- */
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 35px;
+    padding-bottom: 35px;
+}
+
+.left {
+    padding-left: 20px;
+}
+
+.user-pic {
+    width: 200px;
+    height: 200px;
+    background-color: #f8f878;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-pic img {
+    width: 100%;
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.line {
+    display: none;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.your-posts {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.post {
+    width: 450px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f8f878;
+    box-shadow: 1px 1px 5px black;
+}
+
+.u-e-d-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.post-username {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fa3838;
+}
+
+.e-d-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    display: none;
+}
+
+.e-d-cont img {
+    height: 20px;
+    margin-top: 6px;
+}
+
+.likes-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.like-btn{
+    border-radius: 20px;
+    padding: 2px 6px;
+    width: 50px;
+    text-align: center;
+    background-color: #ff7b00;
+}
+
+.like-btn a {
+    text-decoration: none;
+    color: #f8f878;
+}
+
+.likes-count {
+    font-size: 14px;
+}
+
+@media (max-width: 830px){
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 35px;
+        padding-bottom: 35px;
+    }
+    
+    .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .line {
+        display: block;
+        height: 1px;
+        width: 200px;
+        background-color: #ff7b00;
+    }
+}
+
+@media (max-width: 480px){
+    .center {
+        width: 100vw;
+    }
+    .post {
+        width: 80%;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #f8f878;
+        box-shadow: 1px 1px 5px black;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0px;
+        height: 60px;
+        padding: 5px 20px;
+        background-color: #f8f878;
+        position: sticky;
+        top: 0;
+        box-shadow: 1px 1px 10px black;
+    }
+
+    .logo-cont {
+        transform: scale(0.8);
+    }
+
+    .links-cont {
+        transform: scale(1.3);
+    }
+
+    .link {
+        width: auto;
+    }
+    
+    .logout-cont {
+        transform: scale(0.77);
+    }
+
+    .logout {
+        margin: 0;
+    }
+}
+
+@media (max-width: 330px){
+    .nav {
+        padding: 5px 10px;
+    }
+}

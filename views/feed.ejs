@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share it | Social Media App</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/feed.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="links-cont">
+            <a href="/profile/<%= user._id %>">
+                <div class="link">
+                    <img src="/images/profile-icon.png" alt="">
+                </div>
+            </a>
+        </div>
+
+        <div class="logo-cont">
+            <div class="logo">
+                <img src="/images/logo.png" alt="">
+                <div>Share it</div>
+            </div>
+        </div>
+
+        <div class="logout-cont">
+            <a href="/logout">
+                <div class="logout">
+                    <span class="text">Logout</span>
+                    <span class="img">
+                        <img src="/images/logout-icon.png" alt="">
+                    </span>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <nav>
+        <div class="logo-cont">
+            <div class="logo">
+                <img src="/images/logo.png" alt="">
+                <div>Share it</div>
+            </div>
+        </div>
+
+        <div class="links-cont">
+            <a href="/profile/<%= user._id %>">
+                <div class="link">
+                    <img src="/images/profile-icon.png" alt="">
+                    <div>Your Profile</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="logout-cont">
+            <a href="/logout">
+                <div class="logout">
+                    <span class="text">Logout</span>
+                    <span class="img">
+                        <img src="/images/logout-icon.png" alt="">
+                    </span>
+                </div>
+            </a>
+        </div>
+
+    </nav>
+
+    <div class="container">
+        <div class="left">
+            <div class="connect">Connect with others</div>
+            <div class="users">
+
+                <% users.forEach(function(user) { %>
+                    <div class="user">
+                        <div class="user-pic">
+                            <img src="/uploads/<%= user.profilepic %>" alt="">
+                        </div>
+                        <a href="/show/profile/<%= user._id %>" class="user-name">
+                            <%= user.name %>
+                        </a>
+                    </div>
+                    <% }) %>
+
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="center">
+
+            <% posts.reverse().forEach(function(post) { %>
+                <div class="post">
+                    <div class="u-e-d-container">
+                        <% let postUserName="" %>
+                            <% for (let i=0; i < users.length; i++) { %>
+                                <% if (users[i]._id.toString()===post.user.toString()) { %>
+                                    <% postUserName=users[i].username %>
+                                        <% } %>
+                                            <% } %>
+                                                <div class="post-username">@<%= postUserName %>
+                                                </div>
+                                                <div class="e-d-cont">
+                                                    <div><a href="/edit/<%= post._id %>"><img
+                                                                src="/images/edit-icon.png" alt=""></a></div>
+                                                    <div><a href="/delete/<%= post._id %>"><img
+                                                                src="/images/delete-icon.png" alt=""></a></div>
+                                                </div>
+                    </div>
+                    <div class="post-content">
+                        <%= post.content %>
+                    </div>
+                    <div class="likes-container">
+                        <div class="like-btn"><a href="/feed/like/<%= post._id %>">
+                                <%= post.likes.indexOf(user._id)===-1 ? "Like" : "Unlike" %>
+                            </a></div>
+                        <div class="likes-count">
+                            <%= post.likes.length %> Likes
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+
+        </div>
+
+        <div class="right"></div>
+
+    </div>
+</body>
+
+</html>

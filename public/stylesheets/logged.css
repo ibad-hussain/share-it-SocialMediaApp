@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+body {
+    font-family: "Parkinsans", serif;
+    background-color: #ffff8f;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    height: 60px;
+    background-color: #f8f878;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 1px 1px 10px black;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    width: 220px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(0.98);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo div {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.container {
+    margin-top: 35px;
+}
+
+.container a {
+    text-decoration: none;
+    color: black
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 20px;
+    width: 80px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.back img {
+    height: 25px;
+}
+
+.back div {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.back:hover {
+    transform: translateX(-8px);
+}
+
+.wrong {
+    margin: 30px 0 0 20px;
+    font-size: 28px;
+    font-weight: 600;
+}

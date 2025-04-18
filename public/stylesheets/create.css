@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+body {
+    font-family: "Parkinsans", serif;
+    background-color: #ffff8f;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    height: 60px;
+    background-color: #f8f878;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 1px 1px 10px black;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    width: 220px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(0.98);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo div {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    width: 810px;
+    height: 450px;
+    margin: 40px auto auto auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #f8f878;
+    box-shadow: 1px 1px 5px black;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 300px;
+
+}
+
+.left div:nth-child(1), .right div:nth-child(1) {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#username, #name, #email, #password, #age {
+    font-family: "Parkinsans", serif;
+    width: 290px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    padding: 4px;
+    font-size: 16px;
+    background-color: #c4c4c4;
+}
+
+#btn {
+    font-family: "Parkinsans", serif;
+    width: 85px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    padding: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #fa3838;
+    transition: all 0.3s ease-in;
+}
+
+#btn:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+@media (max-width: 830px){
+    .container {
+        width: 85%;
+        height: 540px;
+        padding: 25px 0;
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 400px){
+    #username, #name, #email, #password, #age {
+        width: 200px;
+    }
+}

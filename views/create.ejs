@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share it | Social Media App</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheets/create.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="/images/logo.png" alt="">
+            <div>Share it</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="left">
+            <div>Create Account</div>
+            <div class="form">
+                <form action="/register" method="post">
+                    <input type="text" pattern="^\S+$" title="Username cannot contain spaces" placeholder="Username"
+                        name="username" id="username" required>
+                    <input type="text" placeholder="Name" name="name" id="name" required>
+                    <input type="email" placeholder="Email" name="email" id="email" required>
+                    <input type="password" placeholder="Password" name="password" id="password" required>
+                    <input type="number" placeholder="Age" name="age" id="age" required>
+                    <input type="submit" id="btn" value="Sign Up">
+                </form>
+            </div>
+        </div>
+
+        <div class="right">
+            <div>Login Account</div>
+            <div class="form">
+                <form action="/login" method="post">
+                    <input type="email" placeholder="Email" name="email" id="email" required>
+                    <input type="password" placeholder="Password" name="password" id="password" required>
+                    <input type="submit" id="btn" value="Login">
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

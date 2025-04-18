@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+body {
+    font-family: "Parkinsans", serif;
+    background-color: #ffff8f;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: none;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    height: 60px;
+    padding: 5px;
+    background-color: #f8f878;
+    position: sticky;
+    top: 0;
+    box-shadow: 1px 1px 10px black;
+}
+
+.logo-cont {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    width: 220px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(0.98);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo div {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.links-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links-cont a {
+    text-decoration: none;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.link img {
+    height: 30px;
+    width: 30px;
+    margin-bottom: -2px;
+}
+
+.link div {
+    color: black;
+    font-weight: 500;
+}
+
+.link:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.logout-cont {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+/* From Uiverse.io by mrhyddenn */
+
+.logout {
+    position: relative;
+    background: #fa3838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 15px;
+    margin-right: 22px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.text::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: 26px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.logout:hover .text {
+    top: 75px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    text-align: center;
+    width: 60px;
+}
+
+.logout:hover,
+.logout:hover .text,
+.logout:hover .text::before {
+    background-color: #ff7b00;
+    color: #ffffff;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img {
+    height: 25px;
+}
+
+/* ---------- */
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 35px;
+    padding-bottom: 35px;
+}
+
+.left {
+    padding-left: 20px;
+}
+
+.delete {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.forms {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+#content-area {
+    margin-top: 25px;
+    text-align: start;
+    width: 450px;
+    padding: 6px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    outline: none;
+    resize: none;
+    background-color: #f8f878;
+    font-family: "Parkinsans", serif;
+    box-shadow: 0px 0px 2px black;
+}
+
+#btn-1 {
+    background-color: #fa3838;
+    font-family: "Parkinsans", serif;
+    width: 120px;
+    height: 45px;
+    padding: 6px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#btn-2 {
+    background-color: #47f847;
+    font-family: "Parkinsans", serif;
+    width: 70px;
+    height: 45px;
+    padding: 6px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#btn-1:hover, #btn-2:hover {
+    outline-style: solid;
+    outline-color: black;
+    outline-width: 2px;
+    color: white;
+}
+
+@media (max-width: 490px){
+    #content-area {
+        width: 85vw;
+    }
+}
+
+@media (max-width: 480px){
+    nav {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0px;
+        height: 60px;
+        padding: 5px 20px;
+        background-color: #f8f878;
+        position: sticky;
+        top: 0;
+        box-shadow: 1px 1px 10px black;
+    }
+
+    .logo-cont {
+        transform: scale(0.8);
+    }
+
+    .links-cont {
+        transform: scale(1.3);
+    }
+
+    .link {
+        width: auto;
+    }
+    
+    .logout-cont {
+        transform: scale(0.77);
+    }
+
+    .logout {
+        margin: 0;
+    }
+}
+
+@media (max-width: 330px){
+    .nav {
+        padding: 5px 10px;
+    }
+
+    .forms {
+        gap: 80px;
+    }
+}
