@@ -15,8 +15,8 @@ const postModel = require('./models/post');
 
 
 
-// Setting up ejs as view engine
-app.set("view engine", "ejs");
+// Setting the directory for EJS template files (views) [imp for vercel deployment]
+app.set('views', path.join(__dirname, 'views'));
 
 
 
