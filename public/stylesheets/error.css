@@ -23,7 +23,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 14px;
+    gap: 8px;
     width: 220px;
     cursor: pointer;
     transition: all 0.5s ease;
@@ -35,6 +35,16 @@ nav {
 
 .logo img {
     height: 40px;
+    animation: redFilter 4s forwards infinite alternate;
+}
+
+@keyframes redFilter {
+    0% {
+        filter: none;
+    }
+    100% {
+        filter: sepia(1) saturate(200) hue-rotate(-10deg);
+    }
 }
 
 .logo div {
